@@ -1,0 +1,95 @@
+
+.main-menu {
+  &__item {
+    &:hover,
+    &--active {
+      > a {
+        color: #fff;
+      }
+    }
+
+    &--has-children {
+      position: relative;
+      > a {
+        &::after {
+          content: '\f0da';
+          font-family: 'Font Awesome 5 Free';
+          font-size: 14px;
+          text-align: right;
+          position: absolute;
+          right: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #a9abad;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-weight:400;
+    padding: 0.5rem 0;
+    display: block;
+    position: relative;
+    transition: background-color .1s;
+    letter-spacing: 0.5px;   
+    color: rgb(247, 249, 250);  
+    font-size: 1rem;
+  }
+
+  >li {
+    position: relative;
+  }
+
+  .sub-menu {
+    width: 200px;
+    position: absolute;
+    top: 110%;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    >li {
+      float: none;
+      color: rgba(255, 255, 255, 0.65);
+      position: relative;
+      
+      >a {
+        padding: 12px 22px;
+        font-weight: 700;
+        font-size: 0.67rem;
+        border-top: 1px solid rgba(0,0,0,.1);
+        background-color: $cl-white;
+        letter-spacing: 0.5px;
+        color: #000;
+      }
+
+      &:hover >a {
+        transition: background-color .1s;
+        background-color: #f8f9fa;
+      }
+
+    }
+      
+    &__item--has-children {
+      position: relative;
+      > a {
+        &::after {
+          content: '\f105';
+          font-family: 'Font Awesome 5 Free';
+          font-size: 9px;
+          text-align: right;
+          position: absolute;
+          right: 11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }   
+}
+
+.main-menu-container {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

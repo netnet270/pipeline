@@ -1,0 +1,22 @@
+include ./modules/head/_head
+include ./modules/_sidebar
+include ./modules/menu/_menu
+include ./modules/content/_content
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    +head()
+  body
+    #main-wapper
+      +sidebar()
+      +content()
+
+    script(
+      src='js/main.js',
+      type='text/javascript'
+    )    
+
+
+
+

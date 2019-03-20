@@ -1,0 +1,68 @@
+//-------------------------------------------------------
+//- Modules :: Sidebar
+//-------------------------------------------------------
+
+mixin sidebar()
+  aside#js-sidebar.left-sidebar
+    .logo
+      a.logo__link(href='#')
+        h1
+          img(src="images/logo.svg", alt="logo-main")
+
+    +main-menu()
+
+    .quick-links
+      span.quick-links__title Quick Links
+      ul.quick-links__list
+        each item in ['Team Overview', 'Project', 'Single Task', 'Kanban Board']
+          li.quick-links__item 
+            a.quick-links__link= item
+    
+    form.search-form 
+      span.search-form__icon 
+        i(class="fas fa-search")
+      input.search-form__field(type="text", placeholder="Search")
+
+    .dropdown
+      button.dropdown__btn.js-dropdown Add New
+      ul.dropdown__menu 
+        -
+          var data = [
+            {
+              text: 'Team'
+            },
+            {
+              text: 'Project'
+            },
+            {
+              text: 'Task'
+            }
+          ]
+        each item in data 
+          li.dropdown__item
+            a.dropdown__link(href="#")= item.text
+        
+    .user-profile.js-profile
+      .user-profile__avatar.js-profile-avatar
+        img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
+
+      .user-profile__setting.js-dropdown-setting
+        ul.list-setting
+          -
+            var datas = [
+              {
+                text: 'Profile'
+              },
+              {
+                text: 'Account Setting'
+              },
+              {
+                text: 'Log out'
+              }
+            ]
+
+          each item in datas
+            li.list-setting__item
+              a.list-setting__link(href='#')=item.text
+
+
