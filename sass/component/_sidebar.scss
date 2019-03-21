@@ -15,6 +15,10 @@
   transition: width .25s ease-in;
   background: #343a40 ;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   // Logo
 
   .logo {
@@ -24,6 +28,10 @@
     margin-right: 1.5rem;
     margin-bottom: 3rem;
     font-size: 1.25rem;
+  }
+
+  .d-mobile {
+    display: none;
   }
 
   //Quick Links
@@ -63,7 +71,7 @@
     &__icon {
       position: absolute;
       left: 8%;
-      top: 55%;
+      top: 45%;
       i {
         font-size: 1.125rem;
         display: inline-block;
@@ -87,8 +95,8 @@
 
   //Dropdown 
 
-  .dropdown {
-    &__btn{
+  .btn {
+    &--toggle {
       display: block;
       width: 100%;
       color: #fff;
@@ -108,7 +116,7 @@
         background-color: #0069d9;
         border-color: #0062cc;
       }
-
+  
       &::after {
         content: '\f107';
         font-family: 'Font Awesome 5 Free';
@@ -117,14 +125,18 @@
         position: absolute;
         right: 25%;
         top: 40%;
+        display: none;
       }
     }
+  }
+
+  .dropdown {
     &__menu {
       position: absolute; 
       left: 24px;
       z-index: 100;
       min-width: 10rem;
-      padding: 0.5rem 0;
+      padding: 0.4rem 0;
       margin: 0.125rem 0 0;
       font-size: 1rem;
       color: #6c757d;
@@ -157,12 +169,14 @@
     width: 220px;
     overflow: hidden;
     transition: padding .3 ease-out;
+    cursor: pointer;
 
     &__avatar {
       width: 41px;
       height: 50px;
       overflow: hidden;
       border-radius: 100%;
+      display: inline-block;
     }
 
     &__setting {
@@ -185,4 +199,66 @@
       }
     }
   }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 991px) {
+
+  .left-sidebar {
+    padding: 0.375rem 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    overflow-x: inherit;
+    // Logo
+
+    .logo {
+      margin-bottom: 0;
+    }
+
+    .btn--toggle {
+      margin-bottom: 0.75rem;
+    }
+
+    .d-mobile {
+      display: flex;
+      float: right;
+
+      .btn{
+        &--collaspe {
+          border: 1px solid;
+          background: none;
+          font-size: 14px;
+          height: 32px;
+          color: #b9b1b1;
+          padding: 0 11px;
+          margin-top: 9px;
+          margin-right: 14px;
+          cursor: pointer;
+        }
+      }
+
+      .user-profile {
+        display: block;
+        width: 68%;
+        padding: 0;
+        margin-top: 2px;
+        cursor: pointer;
+      }
+
+    }
+    .left-sidebar__collapse {
+      display: none;
+
+      //Quick Links
+      .quick-links {
+        display: none;
+      }
+    }
+  
+    .user-profile {
+      display: none;
+    }
+  }
+  
 }

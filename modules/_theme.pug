@@ -1,0 +1,10 @@
+//-------------------------------------------------------
+//- Modules :: Theme
+//-------------------------------------------------------
+
+mixin theme(data)
+  .carousel.js-carousel 
+    each item in data 
+      .carousel__item.js-carousel-item
+         a(href= item.href ? item.href : '#')
+          img.img-fluid(src= item.image, alt="image-carousel")

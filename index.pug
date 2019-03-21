@@ -2,16 +2,18 @@ include ./modules/head/_head
 include ./modules/_sidebar
 include ./modules/menu/_menu
 include ./modules/content/_content
-
+include ./modules/_theme
 <!DOCTYPE html>
 html(lang="en")
   head
     +head()
+
   body
     #main-wapper
       +sidebar()
       +content()
 
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(
       src='js/main.js',
       type='text/javascript'

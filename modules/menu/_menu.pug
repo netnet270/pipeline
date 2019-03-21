@@ -40,7 +40,7 @@ mixin main-menu()
             if item.submenu 
               ul.sub-menu.js-submenu
                 each sub in item.submenu
-                  li.main-menu__item.js-sub-item(class=sub.childmenu ? 'sub-menu__item--has-children' : '', class= sub.active ? 'main-menu__item--active' : '')
+                  li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
                     a.main-menu__link(href= href ? href : "#")= sub.title
                           
                                                     

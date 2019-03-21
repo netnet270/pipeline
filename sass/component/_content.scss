@@ -7,13 +7,9 @@ body {
 	font-size: 1.25rem;
 	color: #6c757d;
 }
-
-.container {
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+.section {
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
 }
 
 .main-body {
@@ -22,97 +18,154 @@ body {
 	transition: width .25s ease-in, margin-left .25s ease-in;
 	position: relative;
 	background: #f7f9fa;
+
+	.intro {
+		&__avatar {
+			margin-bottom: 1.5rem ;
+			img {
+				width: 4.5rem;
+				height: 4.5rem;
+			}
+			.badge {
+				color: #fff;
+				background-color: #28a745;
+				position: absolute;
+				border-radius: 5px;
+				font-size: 0.6rem;
+				padding: 0.25em 0.4em;
+			}
+		}
+
+		&__title {
+			margin-bottom: 1.5rem;
+			color: #212529;
+			font-size: 3.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		&__text {
+			margin-bottom: 1.5rem;
+		}
+
+		&__link {
+			color: #007bff;
+			font-size: 1rem;
+			margin-right: 1.5rem;
+			position: relative;
+
+			&:hover {
+				color: #0056b3;
+			}
+
+			&::after {
+				content: '\f107';
+				font-family: 'Font Awesome 5 Free';
+				font-size: 10px;
+				text-align: right;
+				position: absolute;
+				font-weight: 600;
+				right: -9%;
+				top: 9%;
+			}
+		}
+	}
+
+	.page, .component, .layout, .tool {
+		&__header{
+			display:flex;
+		}
+
+		&__icon {
+			margin-top: 2rem;
+			margin-right: 2%;
+			font-size: 2rem;
+			color: #007bff;
+		}
+
+		&__title {
+			margin-bottom: 1.5rem;
+			margin-top: 1.5rem;
+			color: #212529;
+			font-size: 2.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		&__text {
+			margin-bottom: 1.5rem;
+		}
+
+		&__link {
+			color: #007bff;
+			font-size: 1rem;
+			margin-right: 1.5rem;
+			position: relative;
+
+			&:hover {
+				color: #0056b3;
+			}
+		}
+	}
+
+	.component {
+		&__carousel {
+			.carousel {
+				height: 223px;
+			}
+		}
+	}
+
+}
+// RESPONSIVE
+@media screen and (max-width: 991px) {
+
+	.section {
+		padding-top: 2.25rem;
+		padding-bottom: 2.25rem;
+	}
+
+  .main-body {
+		margin-left: 0;
+		width: 100%;
+		margin-top: 4.2rem;
+
+		.col-md-11 {
+			width: 91.66%;
+		}
+
+		.intro {
+			&__avatar {
+				img {
+					width: 2.5rem;
+					height: auto;
+				}
+				.badge {
+					font-size: 0.5rem;
+				}
+			}
+			&__title {
+				font-size: 2rem;
+			}
+		}
+
+
+		.page, .component, .layout, .tool {
+			&__icon{
+				font-size: 1.5rem;
+			}
+			&__title {
+				font-size: 2rem;
+			}
+			&__text {
+				font-size: 1.25rem;
+			}
+		}
+	}
 }
 
-.section {
-	padding-top: 4.5rem;
-	padding-bottom: 4.5rem;
-}
-
-.intro {
-	&__avatar {
-		margin-bottom: 1.5rem ;
-		img {
-			width: 4.5rem;
-			height: 4.5rem;
-		}
-		.badge {
-			color: #fff;
-			background-color: #28a745;
-			position: absolute;
-			border-radius: 5px;
-			font-size: 0.6rem;
-			padding: 0.25em 0.4em;
-		}
-	}
-
-	&__title {
-		margin-bottom: 1.5rem;
-    color: #212529;
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-	}
-
-	&__text {
-		margin-bottom: 1.5rem;
-	}
-
-	&__link {
-		color: #007bff;
-    font-size: 1rem;
-		margin-right: 1.5rem;
-		position: relative;
-
-		&:hover {
-			color: #0056b3;
-		}
-
-		&::after {
-			content: '\f107';
-			font-family: 'Font Awesome 5 Free';
-			font-size: 10px;
-			text-align: right;
-			position: absolute;
-			font-weight: 600;
-			right: -9%;
-			top: 9%;
-		}
-	}
-}
-
-.pages {
-	&__title {
-		margin-bottom: 1.5rem;
-    color: #212529;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-	}
-
-	&__text {
-		margin-bottom: 1.5rem;
-	}
-
-	&__link {
-		color: #007bff;
-    font-size: 1rem;
-		margin-right: 1.5rem;
-		position: relative;
-
-		&:hover {
-			color: #0056b3;
-		}
-
-		&::after {
-			content: '\f107';
-			font-family: 'Font Awesome 5 Free';
-			font-size: 10px;
-			text-align: right;
-			position: absolute;
-			font-weight: 600;
-			right: -9%;
-			top: 9%;
-		}
+@media screen and (max-width: 1139px) {
+	.col-md-11 {
+		width: 91.66%;
 	}
 }

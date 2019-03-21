@@ -6,7 +6,7 @@ mixin content()
   main#js-main-body.main-body
     .container 
       .row
-        .col-9.m-auto
+        .col-9.col-md-11.m-auto
 
           //- INTRO
           section.intro.section
@@ -28,46 +28,43 @@ mixin content()
               {image: 'images/nav-side-kanban-board.png'}
             ]
 
-          mixin page({href, image})
-            .carousel__item.js-carousel-item 
-              a(href= href ? href : '#')
-                img.img-fluid(src= image, alt="image-carousel")
-
-          section.page.section
+          section.page.section 
             .page__carousel
-              each item in pages 
-                +page({image: item.image})
+              +theme(pages)
             .page__header 
-              span.page__icon 
-
-              h3.page__title A project management template for Bootstrap 4
-            .page__text Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
+              i.page__icon(class="fas fa-user-circle")
+              h3.page__title Project Management Pages
+            .page__text Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
             .page__group-link
               a.page__link(href="") App Pages
               a.page__link(href="") Utility Pages
 
             //- COMPONENT
           -
-            var components = [
-              {image: 'images/nav-side-user.png'}, 
-              {image: 'images/nav-side-task.png'},
-              {image: 'images/nav-side-team.png'}, 
-              {image: 'images/nav-side-kanban-board.png'}
+            var componentsFirst= [
+              {image: 'images/activity.png'}, 
+              {image: 'images/card-list.png'},
+              {image: 'images/avatar.png'}, 
+              {image: 'images/card-task.png'}
+            ]
+          -
+            var componentsSecond= [
+              {image: 'images/activity.png'}, 
+              {image: 'images/card-list.png'},
+              {image: 'images/avatar.png'}, 
+              {image: 'images/card-task.png'}
             ]
 
           section.component.section
             .component__carousel
               .row
                 .col-6 
-                  each item in components 
-                    +page({image: item.image})
+                  +theme(componentsFirst)
                 .col-6 
-                  each item in components 
-                    +page({image: item.image})
+                  +theme(componentsSecond)
 
             .component__header 
-              span.component__icon 
-
+              i.component__icon(class="fas fa-user-circle")
               h3.component__title Modular Components
             .component__text Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
             .component__group-link
@@ -86,8 +83,7 @@ mixin content()
                 .col-4 
                   img.img-fluid(src="images/layout-nav-top.svg", alt="layout")
             .layout__header 
-              span.layout__icon 
-
+              i.layout__icon(class="fas fa-th-large") 
               h3.layout__title Flexible Layouts
             .layout__text Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
             .layout__group-link
@@ -107,8 +103,7 @@ mixin content()
                 .col-3 
                   img.img-fluid(src="images/logo-npm.svg", alt="logo tool")
             .tool__header 
-              span.tool__icon 
-
+              i.tool__icon(class="fas fa-wrench")
               h3.tool__title Familiar Tooling
             .tool__text Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
             .tool__group-link

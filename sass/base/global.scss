@@ -1,9 +1,12 @@
 //-------------------------------------------------------
 //- BASE :: GLOBAL
 //-------------------------------------------------------
-
 .container {
-    max-width: 1200px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 .row {
@@ -54,3 +57,19 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
     float: right;
 }
 
+@media screen and (max-width: 767px) {
+    .container {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    [class*="col-"] {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .row {
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+}
