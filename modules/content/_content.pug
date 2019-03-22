@@ -8,18 +8,18 @@ mixin content()
       .row
         .col-9.col-md-11.m-auto
 
-          //- INTRO
-          section.intro.section
-            .intro__avatar
+          //- Template Intro
+          section.template-intro.section
+            .template-intro__avatar
               img(src="images/logo-color.svg", alt="logo")
               span.badge 1.0.1
-            h2.intro__title A project management template for Bootstrap 4
-            .intro__text Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
-            .intro__group-link
-              a.intro__link(href="") Explore Pages
-              a.intro__link(href="") View Components
+            h2.template-intro__title A project management template for Bootstrap 4
+            .template-intro__text Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
+            .template-intro__group-link
+              a.template-intro__link(href="#") Explore Pages
+              a.template-intro__link(href="#") View Components
 
-          //-PAGES
+          //-Project pages
           -
             var pages = [
               {image: 'images/nav-side-user.png'}, 
@@ -28,18 +28,18 @@ mixin content()
               {image: 'images/nav-side-kanban-board.png'}
             ]
 
-          section.page.section 
-            .page__carousel
+          section.project-page.section 
+            .project-page__carousel
               +theme(pages)
-            .page__header 
-              i.page__icon(class="fas fa-user-circle")
-              h3.page__title Project Management Pages
-            .page__text Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
-            .page__group-link
-              a.page__link(href="") App Pages
-              a.page__link(href="") Utility Pages
+            .project-page__header 
+              i.project-page__icon(class="fas fa-user-circle")
+              h3.project-page__title Project Management Pages
+            .project-page__text Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
+            .project-page__group-link
+              a.project-page__link(href="#") App Pages
+              a.project-page__link(href="#") Utility Pages
 
-            //- COMPONENT
+          //- Modular Components
           -
             var componentsFirst= [
               {image: 'images/activity.png'}, 
@@ -55,26 +55,26 @@ mixin content()
               {image: 'images/card-task.png'}
             ]
 
-          section.component.section
-            .component__carousel
+          section.modular-component.section
+            .modular-component__carousel
               .row
                 .col-6 
                   +theme(componentsFirst)
                 .col-6 
                   +theme(componentsSecond)
 
-            .component__header 
-              i.component__icon(class="fas fa-user-circle")
-              h3.component__title Modular Components
-            .component__text Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
-            .component__group-link
-              a.component__link(href="") Pipeline Components
-              a.component__link(href="") Bootstrap Components
+            .modular-component__header 
+              i.modular-component__icon(class="fas fa-user-circle")
+              h3.modular-component__title Modular Components
+            .modular-component__text Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
+            .modular-component__group-link
+              a.modular-component__link(href="#") Pipeline Components
+              a.modular-component__link(href="#") Bootstrap Components
 
-          //- LAYOUT
+          //- Flexible Layouts
 
-          section.layout.section
-            .layout__img-top
+          section.flexible-layouts.section
+            .flexible-layouts__img-top
               .row
                 .col-4 
                   img.img-fluid(src="images/layout-nav-side.svg", alt="layout")
@@ -82,17 +82,17 @@ mixin content()
                   img.img-fluid(src="images/layout-nav-top-sidebar.svg", alt="layout")
                 .col-4 
                   img.img-fluid(src="images/layout-nav-top.svg", alt="layout")
-            .layout__header 
-              i.layout__icon(class="fas fa-th-large") 
-              h3.layout__title Flexible Layouts
-            .layout__text Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
-            .layout__group-link
-              a.layout__link(href="") Explore Layouts
+            .flexible-layouts__header 
+              i.flexible-layouts__icon(class="fas fa-th-large") 
+              h3.flexible-layouts__title Flexible Layouts
+            .flexible-layouts__text Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
+            .flexible-layouts__group-link
+              a.flexible-layouts__link(href="#") Explore Layouts
 
-          //- TOOL
+          //- Familiar Tooling
          
-          section.tool.section
-            .tool__img-top
+          section.familiar-tooling.section
+            .familiar-tooling__img-top
               .row
                 .col-3 
                   img.img-fluid(src="images/logo-bootstrap.svg", alt="logo tool")
@@ -102,10 +102,10 @@ mixin content()
                   img.img-fluid(src="images/logo-sass.svg", alt="logo tool")
                 .col-3 
                   img.img-fluid(src="images/logo-npm.svg", alt="logo tool")
-            .tool__header 
-              i.tool__icon(class="fas fa-wrench")
-              h3.tool__title Familiar Tooling
-            .tool__text Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
-            .tool__group-link
-              a.tool__link(href="") View Documentation
+            .familiar-tooling__header 
+              i.familiar-tooling__icon(class="fas fa-wrench")
+              h3.familiar-tooling__title Familiar Tooling
+            .familiar-tooling__text Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
+            .familiar-tooling__group-link
+              a.familiar-tooling__link(href="#") View Documentation
       

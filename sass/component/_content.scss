@@ -1,9 +1,13 @@
+//-------------------------------------------------------
+//- COMPONENT :: CONTENT
+//-------------------------------------------------------
+
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Inter UI', sans-serif;
 	font-weight: 400;
 	color: #6c757d;
 	line-height: 1.5;
-	letter-spacing: 0.3px;
+	letter-spacing: 0px;
 	font-size: 1.25rem;
 	color: #6c757d;
 }
@@ -19,7 +23,7 @@ body {
 	position: relative;
 	background: #f7f9fa;
 
-	.intro {
+	.template-intro {
 		&__avatar {
 			margin-bottom: 1.5rem ;
 			img {
@@ -59,7 +63,7 @@ body {
 			}
 
 			&::after {
-				content: '\f107';
+				content: '\f0d7';
 				font-family: 'Font Awesome 5 Free';
 				font-size: 10px;
 				text-align: right;
@@ -71,7 +75,10 @@ body {
 		}
 	}
 
-	.page, .component, .layout, .tool {
+	.project-page, 
+	.modular-component, 
+	.flexible-layouts,
+	.familiar-tooling {
 		&__header{
 			display:flex;
 		}
@@ -108,16 +115,29 @@ body {
 		}
 	}
 
-	.component {
+	.modular-component {
 		&__carousel {
 			.carousel {
 				height: 223px;
 			}
 		}
 	}
-
 }
+
 // RESPONSIVE
+
+@media (max-width: 767px) {
+	.main-body{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  &--extend {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+}
+
 @media screen and (max-width: 991px) {
 
 	.section {
@@ -168,4 +188,14 @@ body {
 	.col-md-11 {
 		width: 91.66%;
 	}
+}
+
+.overlay-mobile {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  left: 0;
+  top: 0;
+  z-index: 1;
 }

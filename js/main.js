@@ -17,7 +17,6 @@ $(document).ready(function(){
 
       else {
         $('.main-menu > li').removeClass('main-menu__item--active');
-        $('.js-submenu').slideUp(300);
         menuItem.children('.js-submenu').slideDown(250);
         menuItem.addClass('main-menu__item--active');
       }

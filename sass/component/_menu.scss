@@ -1,10 +1,15 @@
+//-------------------------------------------------------
+//- COMPONENT :: MENU
+//-------------------------------------------------------
 
 .main-menu {
   &__item {
     &:hover,
     &--active {
       > a {
-        color: #fff;
+        &::after {
+          color: rgba(255, 255, 255, 0.9);
+        }
       }
     }
 
@@ -22,35 +27,35 @@
           transform: translateY(-50%);
           color: #a9abad;
           font-weight: 600;
+          transition: all 0.3s;
         }
       }
     }
 
     &--active {
       > a {
-        color: #fff;
-          &::after {
-              transform: rotate(90deg);
-              transition: all 0.3s;
-          }
+        &::after {
+            transform: rotate(90deg);
+            transition: all 0.3s;
+            top: 30%;
+            color: rgba(255, 255, 255, 0.9);
         }
       }
+    }
   }
 
   &__link {
-    font-weight:400;
-    padding: 0.5rem 0;
+    font-weight:500;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     display: block;
+    letter-spacing: 0;
     position: relative;
     transition: background-color .1s;
-    letter-spacing: 0.5px;    
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
   }
 
   .sub-menu {
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
     display: none;
     >li {
       color: rgba(255, 255, 255, 0.65);
@@ -59,9 +64,9 @@
       >a {
         padding-top: .25rem;
         padding-bottom: .25rem;
-        font-weight: 400;
+        font-weight: 500;
         font-size: .875rem;
-        letter-spacing: 0.5px;
+        letter-spacing: 0px;
         color: rgba(255, 255, 255, 0.65);
       }
 

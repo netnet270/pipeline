@@ -1,0 +1,120 @@
+//-------------------------------------------------------
+//- ABSTRACTS :: VARIABLES
+//-------------------------------------------------------
+
+// Color
+
+$cl-blue: #0a76be;
+$cl-light-blue: #3090cf;
+$cl-black: #1a1a1a;
+$cl-light-black: #555;
+$cl-dark-gray: #4d4d4d;
+$cl-gray: #8a8a8a;
+$cl-light-gray: #e5e5e5;
+$cl-pink: #f5748b;
+$cl-light-pink: #f4879a;
+$cl-white: #fff;
+$cl-green: #145e16;
+$cl-yellow: #f5a623;
+
+//Fonts
+$font-family-base: 'Hiragino Kaku Gothic ProN';
+$font-family-icons-solid: 'Font Awesome 5 Free';
+$font-family-icons-brands: 'Font Awesome 5 Brands';
+$font-family-icons-regular: 'Font Awesome 5 Free';
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 400;
+  src: url("../fonts/Inter-UI-Italic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../fonts/Inter-UI-Medium.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 500;
+  src: url("../fonts/Inter-UI-MediumItalic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: url("../fonts/Inter-UI-Bold.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 700;
+  src: url("../fonts/Inter-UI-BoldItalic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("../fonts/Inter-UI-Black.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Black.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 900;
+  src: url("../fonts/Inter-UI-BlackItalic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-BlackItalic.woff") format("woff");
+}
+
+//Font-size
+$font-size-medium: 14px;
+$font-size-small: 12px;
+$font-size-xsmall: 10px;
+$font-size-large: 18px;
+$font-size-xlarge: 24px;
+
+//Font-weight
+$font-weight-base: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+// Paths
+$path-image: '../images';
+$path-fonts: '../fonts';
+
+
+// Borders
+$border-radius-base: 8px;
+$border-radius-small: 3px;
+$border-radius-hack: 100px;
+
+//Border Color
+$border-light-green: #c7d8b6;
+$border-light-pink: #fbc3cd;
+$border-light-blue: #b2d5ed;
+$border-gray: #afafaf;
+$border-light-gray: #e3e3e3;
+
+//Background
+$bg-light-green: #ebf9ef;
+$bg-light-pink: #fef0f3;
+$bg-light-blue: #f5fbff;
+$bg-light-gray: #f5f5f5;

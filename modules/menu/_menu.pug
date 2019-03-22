@@ -11,16 +11,26 @@
     { 
       title: "Pages",
       submenu: [
-        {title: 'App Pages'}, 
-        {title:'Utility Pages'}, 
-        {title:'layouts'}
+        {
+          title: 'App Pages'
+        }, 
+        {
+          title:'Utility Pages'
+        }, 
+        {
+          title:'Layouts'
+        }
       ]
     },
     { 
       title: "Components",
       submenu: [
-        {title: 'Bootstrap'}, 
-        {title:'Pipeline'}
+        {
+          title: 'Bootstrap'
+        }, 
+        {
+          title:'Pipeline'
+        }
       ]
     },
     {
@@ -37,10 +47,10 @@ mixin main-menu()
       each item in menus
         li.main-menu__item.js-menu-item(class=item.submenu ? 'main-menu__item--has-children' : '', class=item.active ? 'main-menu__item--active' : '')
           a.main-menu__link.js-menulink(href= href ? href : "#")= item.title
-            if item.submenu 
-              ul.sub-menu.js-submenu
-                each sub in item.submenu
-                  li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
-                    a.main-menu__link(href= href ? href : "#")= sub.title
+          if item.submenu 
+            ul.sub-menu.js-submenu
+              each sub in item.submenu
+                li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
+                  a.main-menu__link(href= href ? href : "#")= sub.title
                           
                                                     
