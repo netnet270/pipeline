@@ -6,25 +6,26 @@
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding-right: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 6rem;
 }
 
 .row {
-    display: flex;
-    margin-right: -1.5rem;
-    margin-left: -1.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  margin-right: -12px;
+  margin-left: -12px;
+  flex-wrap: wrap;
 }
 
 [class*="col-"] {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
   
 .col-2 {width: 16.66%;}
@@ -40,12 +41,12 @@
 .col-12 {width: 100%;}
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
-    outline: none !important;
-    box-shadow: none;
+  outline: none !important;
+  box-shadow: none;
 }
 
 .m-auto {
@@ -58,19 +59,27 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
     float: right;
 }
 
-@media screen and (max-width: 767px) {
-    .container {
-        padding-right: 12px;
-        padding-left: 12px;
-    }
+@media (max-width: 767px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
 
-    [class*="col-"] {
-        padding-right: 12px;
-        padding-left: 12px;
-    }
-
-    .row {
-        margin-right: -12px;
-        margin-left: -12px;
-    }
+@media (max-width: 991px) {
+  .col-md-11 {
+    width: 91.66%;
+  }
+  
+  .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .row {
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+  [class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }

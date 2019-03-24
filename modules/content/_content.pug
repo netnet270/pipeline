@@ -3,29 +3,43 @@
 //-------------------------------------------------------
 
 mixin content()
-  main#js-main-body.main-body
+  .js-main-body.main-body
     .container 
       .row
-        .col-9.col-md-11.m-auto
+        .col-9.col-md-11.col-sm-12.m-auto
 
           //- Template Intro
+
           section.template-intro.section
             .template-intro__avatar
               img(src="images/logo-color.svg", alt="logo")
               span.badge 1.0.1
             h2.template-intro__title A project management template for Bootstrap 4
-            .template-intro__text Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
-            .template-intro__group-link
-              a.template-intro__link(href="#") Explore Pages
-              a.template-intro__link(href="#") View Components
+            p.template-intro__text Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
+            .template-intro__group-dropdown.d-flex 
+              .dropdown.js-dropdown
+                a.dropdown__toggle.js-dropdown-toggle(href="javascript:void(0)") Explore Pages 
+                ul.dropdown__list.js-dropdown-list 
+                  li.dropdown__item 
+                    a.dropdown__link(href="#") App Pages
+                  li.dropdown__item 
+                    a.dropdown__link(href="#") Utility Pages
+
+              .dropdown.js-dropdown 
+                a.dropdown__toggle.js-dropdown-toggle(href="javascript:void(0)") View Components
+                ul.dropdown__list.js-dropdown-list
+                  li.dropdown__item 
+                    a.dropdown__link(href="#") Bootstrap Components
+                  li.dropdown__item 
+                    a.dropdown__link(href="#") Pipeline Components
 
           //-Project pages
           -
             var pages = [
-              {image: 'images/nav-side-user.png'}, 
-              {image: 'images/nav-side-task.png'},
-              {image: 'images/nav-side-team.png'}, 
-              {image: 'images/nav-side-kanban-board.png'}
+              {image: 'images/component/nav-side-user.png'}, 
+              {image: 'images/component/nav-side-task.png'},
+              {image: 'images/component/nav-side-team.png'}, 
+              {image: 'images/component/nav-side-kanban-board.png'}
             ]
 
           section.project-page.section 
@@ -34,7 +48,7 @@ mixin content()
             .project-page__header 
               i.project-page__icon(class="fas fa-user-circle")
               h3.project-page__title Project Management Pages
-            .project-page__text Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
+            p.project-page__text Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
             .project-page__group-link
               a.project-page__link(href="#") App Pages
               a.project-page__link(href="#") Utility Pages
@@ -42,17 +56,21 @@ mixin content()
           //- Modular Components
           -
             var componentsFirst= [
-              {image: 'images/activity.png'}, 
-              {image: 'images/card-list.png'},
-              {image: 'images/avatar.png'}, 
-              {image: 'images/card-task.png'}
+              {image: 'images/component/activity.png'}, 
+              {image: 'images/component/card-list.png'},
+              {image: 'images/component/avatar.png'}, 
+              {image: 'images/component/card-task.png'},
+              {image: 'images/component/card-kanban.png'},
+              {image: 'images/component/avartar-list.png'}
             ]
           -
             var componentsSecond= [
-              {image: 'images/activity.png'}, 
-              {image: 'images/card-list.png'},
-              {image: 'images/avatar.png'}, 
-              {image: 'images/card-task.png'}
+              {image: 'images/component/card-note.png'},
+              {image: 'images/component/card-project.png'},
+              {image: 'images/component/card-team.png'},
+              {image: 'images/component/chat-item.png'},
+              {image: 'images/component/chat-module.png'},
+              {image: 'images/component/checklist.png'}
             ]
 
           section.modular-component.section
@@ -66,7 +84,7 @@ mixin content()
             .modular-component__header 
               i.modular-component__icon(class="fas fa-user-circle")
               h3.modular-component__title Modular Components
-            .modular-component__text Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
+            p.modular-component__text Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
             .modular-component__group-link
               a.modular-component__link(href="#") Pipeline Components
               a.modular-component__link(href="#") Bootstrap Components
@@ -77,15 +95,15 @@ mixin content()
             .flexible-layouts__img-top
               .row
                 .col-4 
-                  img.img-fluid(src="images/layout-nav-side.svg", alt="layout")
+                  img.img-fluid(src="images/layout/layout-nav-side.svg", alt="layout")
                 .col-4 
-                  img.img-fluid(src="images/layout-nav-top-sidebar.svg", alt="layout")
+                  img.img-fluid(src="images/layout/layout-nav-top-sidebar.svg", alt="layout")
                 .col-4 
-                  img.img-fluid(src="images/layout-nav-top.svg", alt="layout")
+                  img.img-fluid(src="images/layout/layout-nav-top.svg", alt="layout")
             .flexible-layouts__header 
               i.flexible-layouts__icon(class="fas fa-th-large") 
               h3.flexible-layouts__title Flexible Layouts
-            .flexible-layouts__text Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
+            p.flexible-layouts__text Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
             .flexible-layouts__group-link
               a.flexible-layouts__link(href="#") Explore Layouts
 
@@ -105,7 +123,7 @@ mixin content()
             .familiar-tooling__header 
               i.familiar-tooling__icon(class="fas fa-wrench")
               h3.familiar-tooling__title Familiar Tooling
-            .familiar-tooling__text Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
+            p.familiar-tooling__text Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
             .familiar-tooling__group-link
               a.familiar-tooling__link(href="#") View Documentation
       

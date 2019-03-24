@@ -11,13 +11,13 @@ mixin sidebar()
 
     .d-mobile
       button.btn--collaspe.js-btn-collaspe
-        i(class="fas fa-bars")
+        <span class="btn--collaspe__icon"></span>
       
-      .user-profile.js-profile
-        .user-profile__avatar.js-profile-avatar
+      .user-profile.js-dropdown
+        .user-profile__avatar.js-dropdown-toggle
           img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
 
-        .user-profile__setting.js-dropdown-setting
+        .user-profile__setting.js-dropdown-list
           ul.list-setting
             -
               var datas = [
@@ -34,7 +34,7 @@ mixin sidebar()
 
             each item in datas
               li.list-setting__item
-              a.list-setting__link(href='#')=item.text
+                a.list-setting__link(href='#')=item.text
 
     .left-sidebar__collapse.js-sidebar-collapse
       +main-menu()
@@ -51,9 +51,9 @@ mixin sidebar()
           i(class="fas fa-search")
         input.search-form__field(type="text", placeholder="Search")
 
-      .dropdown
-        button.btn--toggle.js-dropdown Add New
-        ul.dropdown__menu.js-dropdown-menu
+      .dropdown.js-dropdown
+        button.btn--toggle.js-dropdown-toggle Add New
+        ul.dropdown__list.js-dropdown-list
           -
             var data = [
               {
@@ -70,11 +70,11 @@ mixin sidebar()
             li.dropdown__item
               a.dropdown__link(href="#")= item.text
           
-    .user-profile.js-profile
-      .user-profile__avatar.js-profile-avatar
+    .user-profile.js-dropdown
+      .user-profile__avatar.js-dropdown-toggle
         img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
 
-      .user-profile__setting.js-dropdown-setting
+      .user-profile__setting.js-dropdown-list
         ul.list-setting
           -
             var datas = [
