@@ -139,6 +139,19 @@ body {
 			}
 		}
 
+		&__carousel {
+			.carousel {
+				position: relative;
+				height: 435px;
+				overflow: hidden;
+				box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
+			
+				&__item {
+					position: absolute;
+				}
+			}			
+		}
+
 		&__header{
 			display:flex;
 			margin-bottom: 1.5rem;
@@ -192,6 +205,25 @@ body {
 }
 
 // RESPONSIVE
+@media (max-width: 767px) {
+	.main-body {
+		.project-page {
+			&__carousel {
+				.carousel {
+					height: 234px;
+				}
+			}
+		}
+	
+		.modular-component {
+			&__carousel {
+				.carousel {
+					height: 119px;
+				}
+			}
+		}
+	}
+}
 
 @media (max-width: 991px) {
 
@@ -233,6 +265,7 @@ body {
 		.modular-component, 
 		.flexible-layouts,
 		.familiar-tooling {
+		
 			&__icon{
 				font-size: 1.5rem;
 			}
@@ -245,6 +278,12 @@ body {
 
 			&__link {
 				font-size: 0.875rem;
+			}
+
+			&__carusel {
+				.carousel{
+					height: 225px;
+				}
 			}
 		}
 

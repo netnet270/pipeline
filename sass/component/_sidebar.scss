@@ -323,13 +323,13 @@
 
     &__collapse {
       position: fixed;
-      z-index: 1000;
+      z-index: 10;
       display: block;
-      height: 100vh;
+      height: calc(100% - 56px);
       background: #343a40;
       width: 80%;
       left: -200%;
-      top: 9%;
+      top: 56px;
       padding: 0.375rem 1.5rem;
       overflow-x: hidden;
       transition: left .5s linear;

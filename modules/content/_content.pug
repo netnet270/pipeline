@@ -44,7 +44,12 @@ mixin content()
 
           section.project-page.section 
             .project-page__carousel
-              +theme(pages)
+              .carousel.js-carousel-first
+                each item in pages 
+                  .carousel__item.js-carousel-item-pages
+                    a(href= item.href ? item.href : '#')
+                      img.img-fluid(src= item.image, alt="image-carousel")
+                
             .project-page__header 
               i.project-page__icon(class="fas fa-user-circle")
               h3.project-page__title Project Management Pages
@@ -55,16 +60,15 @@ mixin content()
 
           //- Modular Components
           -
-            var componentsFirst= [
+            var componentsLeft= [
               {image: 'images/component/activity.png'}, 
               {image: 'images/component/card-list.png'},
               {image: 'images/component/avatar.png'}, 
               {image: 'images/component/card-task.png'},
               {image: 'images/component/card-kanban.png'},
-              {image: 'images/component/avartar-list.png'}
             ]
           -
-            var componentsSecond= [
+            var componentsRight= [
               {image: 'images/component/card-note.png'},
               {image: 'images/component/card-project.png'},
               {image: 'images/component/card-team.png'},
@@ -77,10 +81,17 @@ mixin content()
             .modular-component__carousel
               .row
                 .col-6 
-                  +theme(componentsFirst)
+                  .carousel.js-carousel-second
+                    each item in componentsLeft 
+                      .carousel__item.js-carousel-item-component-left
+                          a(href= item.href ? item.href : '#')
+                            img.img-fluid(src= item.image, alt="image-carousel")
                 .col-6 
-                  +theme(componentsSecond)
-
+                  .carousel.js-carousel-third
+                     each item in componentsRight 
+                      .carousel__item.js-carousel-item-component-right
+                          a(href= item.href ? item.href : '#')
+                            img.img-fluid(src= item.image, alt="image-carousel")
             .modular-component__header 
               i.modular-component__icon(class="fas fa-user-circle")
               h3.modular-component__title Modular Components

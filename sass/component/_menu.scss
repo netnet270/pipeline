@@ -35,10 +35,10 @@
     &--active {
       > a {
         &::after {
-            transform: rotate(90deg);
-            transition: all 0.3s;
-            top: 30%;
-            color: rgba(255, 255, 255, 0.9);
+          transform: rotate(90deg);
+          transition: all 0.3s;
+          top: 30%;
+          color: rgba(255, 255, 255, 0.9);
         }
       }
     }
