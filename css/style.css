@@ -188,7 +188,7 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
       color: rgba(255, 255, 255, 0.5); }
       .left-sidebar .left-sidebar__collapse .search-form__icon {
         position: absolute;
-        left: 9%;
+        left: 20px;
         top: 41%; }
         .left-sidebar .left-sidebar__collapse .search-form__icon i {
           font-size: 0.8rem;
@@ -237,7 +237,7 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
         font-size: 10px;
         text-align: right;
         position: absolute;
-        right: 30%;
+        right: 67px;
         top: 29%; }
     .left-sidebar .left-sidebar__collapse .dropdown__list {
       position: absolute;
@@ -365,7 +365,7 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
       position: fixed;
       z-index: 10;
       display: block;
-      height: 100vh;
+      height: calc(100% - 56px);
       background: #343a40;
       width: 80%;
       left: -200%;
